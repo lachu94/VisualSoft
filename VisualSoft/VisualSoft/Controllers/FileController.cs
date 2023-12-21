@@ -22,9 +22,8 @@ namespace VisualSoft.Controllers
             _fileConversionService = fileConversionService;
         }
 
-        // [Authorize]
+        [Authorize]
         [HttpPost("x")]
         public async Task<DocumentResponse> ProcessFile(int x, IFormFile file) => await _fileConversionService.ProcessFile(x, file);
-
     }
 }
